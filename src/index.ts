@@ -21,9 +21,7 @@ app.use(cors());
 const server = http.createServer(app);                  
 
 app.use('/',(req,res)=>{
-
     res.send("elo")
-
 })
 
 
@@ -31,7 +29,6 @@ app.use('/',(req,res)=>{
 
 
 server.listen(PORT,()=>{
-
     connectDB()
     console.log("Server is listning on PORT "+ PORT)
 });

@@ -60,8 +60,8 @@ const getUserById = async(id:string)=>{
     }
 }
 const createUser = (values:Record<string,any>)=>{
- new UserModel(values).save().then((user)=>{
-    return user.toObject();
+return new UserModel(values).save().then((user)=>{
+ user.toObject();
  }).catch((err)=>{
     return {
         message:'something went wrong while creating new user',
@@ -105,4 +105,4 @@ const updateUserById = async(id:string,values:Record<string,any>)=>{
 
 
 
-export {UserModel,getAllUsers,getUserByEmail}
+export {UserModel,getAllUsers,getUserByEmail,getUserBySessionToken,getUserById,createUser,deleteUserById,updateUserById}
